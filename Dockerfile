@@ -11,5 +11,4 @@ ADD ec2_price_fetcher.py ./
 RUN pip install --no-cache-dir --upgrade pip \
   && pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 80
 CMD [ "sh", "-c", "python ec2_price_fetcher.py --s3_region ${S3_REGION} ${BUCKET_NAME}"]
